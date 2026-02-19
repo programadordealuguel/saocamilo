@@ -42,89 +42,6 @@ $(document).ready(function(){
 		// instead of a settings object
 	  ]
 	});
-
-	$('#carousel-equipe').slick({
-	  dots: false,
-	  infinite: true,
-	  speed: 300,
-      arrows: false,
-	  slidesToShow: 2,
-	  slidesToScroll: 1,
-	  responsive: [
-		{
-		  breakpoint: 1200,
-		  settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			infinite: true,
-			dots: false
-		  }
-		},
-		{
-		  breakpoint: 767,
-		  settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1,
-      dots: false, 
-		  }
-		},
-		{
-		  breakpoint: 480,
-		  settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1,
-      dots: false,  
-      arrows: false,
-      infinite: true  
-		  }
-		}
-		// You can unslick at a given breakpoint now by adding:
-		// settings: "unslick"
-		// instead of a settings object
-	  ]
-	});
-
-   $('#carousel-missao').slick({
-	  dots: false,
-	  infinite: true,
-	  speed: 300,
-    arrows: false,
-	  slidesToShow: 3,
-	  slidesToScroll: 1,
-	  responsive: [
-		{
-		  breakpoint: 1024,
-		  settings: {
-			slidesToShow: 2,
-			slidesToScroll: 1,
-			infinite: true,
-			dots: false
-		  }
-		},
-		{
-		  breakpoint: 767,
-		  settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1,
-      dots: false, 
-		  }
-		},
-		{
-		  breakpoint: 480,
-		  settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1,
-      dots: false,  
-      arrows: false,
-      infinite: true  
-		  }
-		}
-		// You can unslick at a given breakpoint now by adding:
-		// settings: "unslick"
-		// instead of a settings object
-	  ]
-	});
-    
     
   $('#carousel-depoimentos').slick({
 	  dots: true,
@@ -156,9 +73,9 @@ $(document).ready(function(){
 		  settings: {
 			slidesToShow: 1,
 			slidesToScroll: 1,
-      dots: false,  
-      arrows: false,
-      infinite: true  
+			dots: true,  
+			arrows: false,
+			infinite: true  
 		  }
 		}
 		// You can unslick at a given breakpoint now by adding:
@@ -167,14 +84,13 @@ $(document).ready(function(){
 	  ]
 	});
 
-  $('#carousel-bene').slick({
-	  dots: false,
+  $('#carousel-historia').slick({
+	  dots: true,
 	  infinite: true,
 	  speed: 300,
-    arrows: false,
-	  slidesToShow: 4,
-	  slidesToScroll: 1,
- 
+      arrows: true,
+	  slidesToShow: 6,
+	  slidesToScroll: 6,
 	  responsive: [
 		{
 		  breakpoint: 1024,
@@ -182,8 +98,7 @@ $(document).ready(function(){
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			infinite: true,
-			dots: false,
-      autoplay: true,
+			dots: false
 		  }
 		},
 		{
@@ -199,9 +114,9 @@ $(document).ready(function(){
 		  settings: {
 			slidesToShow: 1,
 			slidesToScroll: 1,
-      dots: false,  
-      arrows: false,
-      infinite: true  
+			dots: true,  
+			arrows: false,
+			infinite: true  
 		  }
 		}
 		// You can unslick at a given breakpoint now by adding:
@@ -210,11 +125,8 @@ $(document).ready(function(){
 	  ]
 	});
 
-  
-    
+ 
 	//MENU MOBILE
-	
-    
     jQuery("#abre-menu").click(function(){
       jQuery("#abre-menu").hide();
       jQuery("#fecha-menu").show();
@@ -307,17 +219,6 @@ document.addEventListener('DOMContentLoaded', function () {
   checkVisibility();
 });
 
-//Galeria - Troca de imagens
-const menu = document.getElementById('menu');
-const menuHeight = menu.offsetHeight;
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > menuHeight) {
-    menu.classList.add('menu-bg');
-  } else {
-    menu.classList.remove('menu-bg');
-  }
-});
 
 
 
