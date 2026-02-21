@@ -1011,6 +1011,239 @@ p {
     margin-top: 22px;
 }
 
+.bloco-1-exames {
+    padding-top: 32px;
+}
+
+.bloco-1-exames h1 {
+    color: #004588;
+    font-family: Gotham;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.img-top-iternas {
+    width: 100%;
+    height: 40vh;
+    background-position: top center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 22px;
+}
+
+.btn-exame-1 {
+    padding: 11px;
+    border-radius: 12px;
+    background-color: rgba(0, 69, 136, 0.42);
+    color: #004588;
+    font-family: Gotham;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: block;
+    margin-bottom: 10px;
+    background-image: url(../images/seta-exame.svg);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+}
+
+.btn-exame-1:hover {
+    background-color: #004588;
+    color: #fff;
+    background-image: url(../images/seta-exame-hover.svg);
+}
+
+.btn-exame-2 {
+    padding: 11px;
+    border-radius: 12px;
+    background: rgba(0, 173, 239, 0.31);
+    color: #004588;
+    font-family: Gotham;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: block;
+    margin-bottom: 10px;
+    background-image: url(../images/seta-exame.svg);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+}
+
+.btn-exame-2:hover {
+    background-color: #004588;
+    color: #fff;
+    background-image: url(../images/seta-exame-hover.svg);
+}
+
+.cada-grupo-exames {
+    margin-top: 32px;
+}
+
+.cada-grupo-exames h2 {
+    display: block;
+    color: #004588;
+    font-family: Gotham;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.sec-azul-exames {
+    background: #004588;
+    padding: 22px 0px;
+}
+
+.sec-azul-exames img {
+    border-radius: 10px;
+}
+
+.sec-azul-exames h3 {
+    color: #FFF;
+    font-family: Gotham;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.single-exame-content .img-top-iternas {
+    margin-top: 22px;
+}
+
+.single-exame-content li {
+    color: #000;
+    font-family: Gotham;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.single-exame-content h2 {
+    color: #004588;
+    font-family: Gotham;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 112.596%; /* 18.015px */
+    margin-bottom: 12px;
+}
+
+.single-exame-content a {
+    color: #004588;
+}
+
+.img-cta-azul-exame {
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 22px 0px;
+}
+
+.cta-azul-exame {
+    background: #004588;
+    padding: 22px 0px;
+}
+
+.cta-azul-exame p {
+    color: #fff;
+}
+
+.cta-azul-exame h3 {
+    display: block;
+    color: #FFF;
+    font-family: Gotham;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.cta-azul-exame h4 {
+   color: #FFF;
+    font-family: Gotham;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal; 
+}
+
+.cada-profissional {
+    margin-bottom: 30px;
+}
+
+.cada-profissional:hover .content-texto-profissional {
+    background-color: #004588;
+}
+
+.img-profissional {
+    width: 100%;
+    height: 183px;
+    border-radius: 8px 8px 0px 0px;
+    background-position: center;
+    background-size: cover;
+}
+
+.content-texto-profissional {
+    border-radius: 3.971px;
+    background: #00A1DF;
+    padding: 12px;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.content-texto-profissional h2 {
+    display: block;
+    color: #FFF;
+    font-family: Gotham;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 105%; /* 10.5px */
+    letter-spacing: -0.2px;
+}
+
+.info-medico {
+    color: #FFF;
+    text-align: center;
+    font-family: Gotham;
+    font-size: 12px;
+    font-style: normal;
+}
+
+.info-medico span {
+    font-weight: 400;
+}
+
+.info-medico strong {
+    font-weight: 900;
+}
+
+.cta-profissionais {
+    padding: 32px 0px;
+}
+
+.cta-profissionais h4 {
+    display: block;
+    color: #004588;
+    text-align: center;
+    font-family: Gotham;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
 @media (max-width: 1399.98px) {
     .menu a {
         font-size: 14px;
