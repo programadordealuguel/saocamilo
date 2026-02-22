@@ -1244,6 +1244,113 @@ p {
     line-height: normal;
 }
 
+.info-single-medico {
+    color: #004588;
+    font-family: Gotham;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%; /* 14.7px */
+    letter-spacing: -0.28px;
+    margin: 50px 0px 20px 0px;
+}
+
+.img-profissional-single {
+    margin-top: 12px;
+}
+
+.sec-azul-exames p {
+    color: #fff;
+}
+
+.single-profissional {
+    margin-bottom: 32px;
+}
+
+.content-convenios {
+    border-radius: 11.186px;
+    background: #FFF;
+    padding: 22px;
+    box-shadow: 1.864px 1.864px 7.458px 0 rgba(0, 0, 0, 0.20);
+}
+
+.content-convenios .col-md-2 {
+    margin-bottom: 30px;
+}
+
+.cta-convenios {
+    text-align: center;
+}
+
+.cada-unidade-pag {
+    background-color: #004588;
+    padding: 20px;
+    text-align: center;
+}
+
+.cada-unidade-pag h2 {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    font-family: Gotham;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.cada-unidade-pag p {
+    color: #FFF;
+    text-align: center;
+    font-family: Gotham;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 12px;
+}
+
+.cada-unidade-pag a:hover {
+    color: #00A1DF;
+}
+
+.img-unidade {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin: 12px 0px;
+}
+
+.phone-unidade {
+    display: inline-block;
+    background-image: url(../images/unidade-phone.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    color: #FFF;
+    font-family: Gotham;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.whatsapp-unidade {
+    display: inline-block;
+    background-image: url(../images/unidade-whatsapp.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    color: #FFF;
+    font-family: Gotham;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
 @media (max-width: 1399.98px) {
     .menu a {
         font-size: 14px;
