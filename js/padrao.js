@@ -93,12 +93,12 @@ $(document).ready(function(){
 	  slidesToScroll: 6,
 	  responsive: [
 		{
-		  breakpoint: 1024,
+		  breakpoint: 1400,
 		  settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1,
+			slidesToShow: 4,
+			slidesToScroll: 4,
 			infinite: true,
-			dots: false
+			dots: true
 		  }
 		},
 		{

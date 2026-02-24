@@ -1569,6 +1569,13 @@ p {
     .content-cada-unidade {
         min-height: 279px;
     }
+
+    .cada-icon-clinica-sobre p {
+        width: 98%;
+    }
+    .cada-icon-clinica-sobre img {
+        top: 0px;
+    }
 }
 
 @media (max-width: 1199.98px) {
@@ -1588,9 +1595,16 @@ p {
     .icon-phone {
         font-size: 14px;
     }
+    
 }
 
 @media (max-width: 991.98px) {
+    p, .single-exame-content li {
+        font-size: 14px;
+    }
+    .single-exame-content h2 {
+        font-size: 16px;
+    }
     .menu {
         display: none;
     }
@@ -1653,17 +1667,56 @@ p {
     .menu-rodape a {
         font-size: 12px;
     }
+    .cada-icon-clinica-sobre p {
+        margin-bottom: 0px;
+        padding-left: 41px;
+    }
+    .cada-icon-clinica-sobre img {
+        top: 50%;
+        margin-top: -21px;
+    }
+    .sec-a-clinica-sobre .col-xxl-4 {
+        margin-bottom: 15px;
+    }
+    .sec-historia {
+        overflow: hidden;
+    }
+    .sec-referencia-sobre .container {
+        padding: 0px 30px;
+    }
+    .sec-azul-exames {
+        text-align: center;
+        margin-top: 22px;
+    }
+    .sec-azul-exames img {
+        margin-bottom: 22px;
+    }
+    .sec-azul-exames h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .bloco-1-exames h1 {
+        text-align: center;
+        font-size:20px ;
+    }
+    .cta-azul-exame h3 {
+        text-align: center;
+    }
+    .alinha-mobile {
+        text-align: center;
+    }
+    .cta-azul-exame h4 {
+        font-size: 20px;
+    }
+    .botoes-topo a {
+        padding: 5px;
+        font-size: 12px;
+    }
     
 }
 
 @media (max-width: 767.98px) {
-    p {
-        font-size: 14px;
-    }
-    .botoes-topo a {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
+    
     .logo {
         max-width: 143px;
     }
@@ -1732,9 +1785,32 @@ p {
         font-size: 14px;
         margin-bottom: 5px;
     }
+    .bloco-1-exames h1 {
+        font-size: 20px;
+    }
+    .img-top-iternas {
+        height: 31vh;
+    }
+    .btn-exame-1, .btn-exame-2 {
+        font-size: 12px;
+    }
+    .content-texto-profissional h2 {
+        font-size: 12px;
+    }
+    .info-medico  {
+        font-size: 12px;
+    }
+    .img-profissional {
+        height: 105px;
+    }
+    .cta-profissionais h4 {
+        font-size: 18px;
+    }
 }
 
-@media (max-width: 575.98px) { }
+@media (max-width: 575.98px) { 
+    
+}
 
 
 
