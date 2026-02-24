@@ -87,74 +87,45 @@
     </div>
   </section>
 
+  <?php $query = new WP_Query( array( 'post_type' => 'certificacao' , 'posts_per_page' => -1 ) ); ?>
+  <?php if($query->have_posts()) { ?> 
   <section class="sec sec-qualidade-sobre">
     <div class="container">
       <h2>Qualidade reconhecida em cada detalhe</h2>
       <p>As certificações da São Camilo vão além de padrões técnicos. Elas refletem o compromisso com equipamentos de alta precisão, processos rigorosos de qualidade e uma equipe em constante atualização, garantindo segurança e confiabilidade em cada exame.</p>
       <div class="row">
+        <?php while($query->have_posts()) {  $query->the_post(); ?>
         <div class="col-4 col-lg-2">
-          <img src="images/selo-1.jpg" class="img-fluid" alt="Certificado qualidade ultrassonorafia">
+          <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid" alt="<?php the_title(); ?>">
         </div>
-        <div class="col-4 col-lg-2">
-          <img src="images/selo-2.jpg" class="img-fluid" alt="Certificado qualidade tomografia">
-        </div>
-        <div class="col-4 col-lg-2">
-          <img src="images/selo-3.jpg" class="img-fluid" alt="Certificado qualidade ressonância">
-        </div>
-        <div class="col-4 col-lg-2">
-          <img src="images/selo-4.jpg" class="img-fluid" alt="Certificado qualidade mamografia">
-        </div>
-        <div class="col-4 col-lg-2">
-          <img src="images/selo-5.jpg" class="img-fluid" alt="Certificado qualidade ProQuad">
-        </div>
+        <?php } ?>
       </div>
     </div>
   </section>
+  <?php } wp_reset_postdata(); ?>
 
+  <?php $query = new WP_Query( array( 'post_type' => 'referencia' , 'posts_per_page' => -1 ) ); ?>
+  <?php if($query->have_posts()) { ?> 
   <section class="sec-referencia-sobre">
     <div class="container">
       <h2>O que faz da São Camilo uma referência em diagnóstico por imagem</h2>
       <div class="row">
+        <?php while($query->have_posts()) {  $query->the_post(); ?>
         <div class="col-xl-6 col-xxl-4">
           <div class="cada-referencia">
             <div class="icon-referencia"></div>
-            <h3>Tecnologia de última geração</h3>
-            <p>Equipamentos modernos e protocolos avançados, garantindo mais precisão e segurança em cada exame.</p>
+            <h3><?php the_title(); ?></h3>
+            <?php the_content(); ?>
           </div>
         </div>
-        <div class="col-xl-6 col-xxl-4">
-          <div class="cada-referencia">
-            <div class="icon-referencia"></div>
-            <h3>Tecnologia de última geração</h3>
-            <p>Equipamentos modernos e protocolos avançados, garantindo mais precisão e segurança em cada exame.</p>
-          </div>
-        </div>
-        <div class="col-xl-6 col-xxl-4">
-          <div class="cada-referencia">
-            <div class="icon-referencia"></div>
-            <h3>Tecnologia de última geração</h3>
-            <p>Equipamentos modernos e protocolos avançados, garantindo mais precisão e segurança em cada exame.</p>
-          </div>
-        </div>
-        <div class="col-xl-6 col-xxl-4">
-          <div class="cada-referencia">
-            <div class="icon-referencia"></div>
-            <h3>Tecnologia de última geração</h3>
-            <p>Equipamentos modernos e protocolos avançados, garantindo mais precisão e segurança em cada exame.</p>
-          </div>
-        </div>
-        <div class="col-xl-6 col-xxl-4">
-          <div class="cada-referencia">
-            <div class="icon-referencia"></div>
-            <h3>Tecnologia de última geração</h3>
-            <p>Equipamentos modernos e protocolos avançados, garantindo mais precisão e segurança em cada exame.</p>
-          </div>
-        </div>
+        <?php } ?>
       </div>
       <h4>Agende seu exame agora e experimente o cuidado que atravessa gerações.</h4>
-      <div class="d-block text-center"><a href="#" class="btn-azul">Agendar exame</a></div>
+      <div class="d-block text-center"><a href="<?php bloginfo('url'); ?>/agendamento" class="btn-azul">Agendar exame</a></div>
     </div>
   </section>
+  <?php } wp_reset_postdata(); ?>
+
 </main>
 
 <?php get_footer(); ?>
