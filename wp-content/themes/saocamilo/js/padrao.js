@@ -37,9 +37,6 @@ $(document).ready(function(){
       infinite: true  
 		  }
 		}
-		// You can unslick at a given breakpoint now by adding:
-		// settings: "unslick"
-		// instead of a settings object
 	  ]
 	});
     
@@ -78,9 +75,6 @@ $(document).ready(function(){
 			infinite: true  
 		  }
 		}
-		// You can unslick at a given breakpoint now by adding:
-		// settings: "unslick"
-		// instead of a settings object
 	  ]
 	});
 
@@ -119,9 +113,6 @@ $(document).ready(function(){
 			infinite: true  
 		  }
 		}
-		// You can unslick at a given breakpoint now by adding:
-		// settings: "unslick"
-		// instead of a settings object
 	  ]
 	});
 
@@ -146,32 +137,32 @@ $(document).ready(function(){
 
 //lazy background
 document.addEventListener("DOMContentLoaded", function() {
-      var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+	var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
 
-      if ("IntersectionObserver" in window) {
-        // Create IntersectionObserver instance
-        var lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              // Replace data-src with actual background-image URL
-              entry.target.style.backgroundImage = "url('" + entry.target.getAttribute("data-src") + "')";
-              // Unobserve the target element
-              lazyBackgroundObserver.unobserve(entry.target);
-            }
-          });
-        });
+	if ("IntersectionObserver" in window) {
+	// Create IntersectionObserver instance
+	var lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+		entries.forEach(function(entry) {
+		if (entry.isIntersecting) {
+			// Replace data-src with actual background-image URL
+			entry.target.style.backgroundImage = "url('" + entry.target.getAttribute("data-src") + "')";
+			// Unobserve the target element
+			lazyBackgroundObserver.unobserve(entry.target);
+		}
+		});
+	});
 
-        // Observe each lazy-background element
-        lazyBackgrounds.forEach(function(lazyBackground) {
-          lazyBackgroundObserver.observe(lazyBackground);
-        });
-      } else {
-        // Fallback for browsers that don't support IntersectionObserver
-        lazyBackgrounds.forEach(function(lazyBackground) {
-          lazyBackground.style.backgroundImage = "url('" + lazyBackground.getAttribute("data-src") + "')";
-        });
-      }
-    });
+	// Observe each lazy-background element
+	lazyBackgrounds.forEach(function(lazyBackground) {
+		lazyBackgroundObserver.observe(lazyBackground);
+	});
+	} else {
+	// Fallback for browsers that don't support IntersectionObserver
+	lazyBackgrounds.forEach(function(lazyBackground) {
+		lazyBackground.style.backgroundImage = "url('" + lazyBackground.getAttribute("data-src") + "')";
+	});
+	}
+});
 	
 //lazy image
 document.addEventListener("DOMContentLoaded", function() {

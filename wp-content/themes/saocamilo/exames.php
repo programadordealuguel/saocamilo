@@ -3,7 +3,7 @@
 <main class="principal"> 
   <section class="bloco-1-exames">
     <div class="container">
-      <div class="img-top-iternas" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+      <div class="img-top-iternas lazy-background" data-src="<?php the_post_thumbnail_url(); ?>"></div>
       <h1><?php the_title(); ?></h1>
       <?php the_content(); ?>
       <?php 
@@ -77,7 +77,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <img src="<?php the_field('imagem_cta_imagem'); ?>" class="img-fluid" alt="Exames de imagem  em Sinop">
+          <img data-src="<?php the_field('imagem_cta_imagem'); ?>" class="img-fluid lazy-image" alt="Exames de imagem  em Sinop">
         </div>
         <div class="col-lg-6">
           <?php echo acf_esc_html(get_field('texto_cta_imagem')); ?>

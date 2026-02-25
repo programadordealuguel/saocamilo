@@ -16,8 +16,8 @@
       <div class="row">
         <?php while($query->have_posts()) {  $query->the_post(); ?>
         <div class="col-6 col-lg-4">
-          <div class="cada-profissional">
-            <div class="img-profissional" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+          <a href="<?php the_permalink(); ?>" class="cada-profissional">
+            <div class="img-profissional lazy-background" data-src="<?php the_post_thumbnail_url(); ?>"></div>
             <div class="content-texto-profissional">
               <h2><?php the_title(); ?></h2>
               <div class="info-medico">
@@ -25,13 +25,13 @@
                 <span><?php the_field('crm_profissional'); ?></span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <?php } ?>
       </div>
     </div>
   </section>
-  <?php } ?>
+  <?php } wp_reset_postdata(); ?>
 
   <section class="cta-profissionais">
     <div class="container">

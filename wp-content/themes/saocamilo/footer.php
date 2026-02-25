@@ -9,10 +9,7 @@
               <li>Unidade Sinop Clínica: De segunda a sexta-feira das 7h30 às 12h e das14h às 18h;</li>
               <li>Unidade Alta Floresta: De segunda a sexta-feira das 8h às 12h e das 14h às 18h</li>
             </ul>
-            <p>Clínica São Camilo
-            Registro: CRM - MT 380<br>
-            Diretor Técnico-Médico: Dr. Elias Destefani<br>
-            CRM-MT: 1293 | RQE-MT: 3448</p>
+            <p><?php echo get_option('responsavel'); ?></p>
             <div class="menu-rodape">
               <a href="#">Sobre •</a>
               <a href="#">Exames •</a>
@@ -28,9 +25,10 @@
           <div class="col-lg-5">
             <h2>Nossas redes sociais</h2>
             <div class="social">
-              <a href="#" target="_blank"><img src="<?php bloginfo('template_directory') ?>/images/icon-whatsapp-azul.svg" alt="Whatsapp"></a>
-              <a href="#" target="_blank"><img src="<?php bloginfo('template_directory') ?>/images/icon-facebook-azul.svg" alt="Facebook"></a>
-              <a href="#" target="_blank"><img src="<?php bloginfo('template_directory') ?>/images/icon-instagram-azul.svg" alt="Instagram"></a>
+              <?php if (get_option('whatsapp') != NULL) { ?><a href="https://api.whatsapp.com/send?phone=55<?php echo RemoveSpecialChar(get_option('whatsapp')); ?>&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank"><img src="<?php bloginfo('template_directory') ?>/images/icon-whatsapp-azul.svg" alt="Whatsapp"></a><?php } ?>
+              <?php if (get_option('instagram') != NULL) { ?><a target="_blank" href="<?php echo get_option('instagram') ?>"><img src="<?php bloginfo('template_directory') ?>/images/icon-instagram-azul.svg" alt="Instagram"></a><?php } ?>
+              <?php if (get_option('facebook') != NULL) { ?><a target="_blank" href="<?php echo get_option('facebook') ?>"><img src="<?php bloginfo('template_directory') ?>/images/icon-facebook-azul.svg" alt="Facebook"></a><?php } ?>
+              
             </div>
             <p class="p-aviso">As informações em nosso site tem caráter meramente informativo e não substituem as orientações do seu médico.</p>
           </div>

@@ -2,12 +2,12 @@
 
 <main class="principal">
       
-      <section class="hero">
+      <section class="hero fade-in-element">
         <div class="container">
           <div class="row align-items-center">
             
             <div class="col-lg-6 order-lg-2">
-              <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid" alt="Clínica São Camilo">
+              <img data-src="<?php the_post_thumbnail_url(); ?>" class="img-fluid lazy-image" alt="Clínica São Camilo">
             </div>
             <div class="col-lg-6 order-lg-1">
               <?php the_content(); ?>
@@ -17,11 +17,11 @@
         </div>
       </section>
 
-      <section class="sec sec-imagem-texto-1">
+      <section class="sec sec-imagem-texto-1 fade-in-element">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6">
-              <img src="<?php the_field('imagem_texto_1'); ?>" class="img-fluid img-cta-texto-img" alt="Exames de imagem sinop">
+              <img data-src="<?php the_field('imagem_texto_1'); ?>" class="img-fluid img-cta-texto-img lazy-image" alt="Exames de imagem sinop">
             </div>
             <div class="col-lg-6">
               <?php echo acf_esc_html(get_field('texto_1_home')); ?>
@@ -31,30 +31,30 @@
         </div>
       </section>
 
-      <section class="sec sec-botoes-home">
+      <section class="sec sec-botoes-home fade-in-element">
         <div class="container">
           <div class="content-botoes-home">
             <div class="row">
               <div class="col-md-6 col-lg-3">
-                <img src="<?php bloginfo('template_directory') ?>/images/icon-agendamento.svg" height="52" alt="Agendamento online">
+                <img class="lazy-image" data-src="<?php bloginfo('template_directory') ?>/images/icon-agendamento.svg" height="52" alt="Agendamento online">
                 <h2>Agendamento online</h2>
                 <p>Praticidade para escolher o melhor horário para você.</p>
                 <a href="<?php bloginfo('url'); ?>/agendamento" class="btn-azul-escuro">Acessar agora</a>
               </div>
               <div class="col-md-6 col-lg-3">
-                <img src="<?php bloginfo('template_directory') ?>/images/icon-exames.svg" height="52" alt="Resultados de exames">
+                <img class="lazy-image" data-src="<?php bloginfo('template_directory') ?>/images/icon-exames.svg" height="52" alt="Resultados de exames">
                 <h2>Resultados de exames</h2>
                 <p>Acesse seus resultados com segurança.</p>
-                <a href="#" class="btn-azul-escuro">Acessar agora</a>
+                <a href="<?php echo get_option('link_1'); ?>" target="_blank" class="btn-azul-escuro">Acessar agora</a>
               </div>
               <div class="col-md-6 col-lg-3">
-                <img src="<?php bloginfo('template_directory') ?>/images/icon-convenios.svg" height="52" alt="Convênios atendidos">
+                <img class="lazy-image" data-src="<?php bloginfo('template_directory') ?>/images/icon-convenios.svg" height="52" alt="Convênios atendidos">
                 <h2>Convênios atendidos</h2>
                 <p>Atendemos os principais planos da região.</p>
                 <a href="<?php bloginfo('url'); ?>/convenios" class="btn-azul-escuro">Acessar agora</a>
               </div>
               <div class="col-md-6 col-lg-3">
-                <img src="<?php bloginfo('template_directory') ?>/images/icon-unidades.svg" height="52" alt="Unidades">
+                <img class="lazy-image" data-src="<?php bloginfo('template_directory') ?>/images/icon-unidades.svg" height="52" alt="Unidades">
                 <h2>Unidades</h2>
                 <p>Encontre a unidade mais próxima.</p>
                 <a href="<?php bloginfo('url'); ?>/unidades" class="btn-azul-escuro">Acessar agora</a>
@@ -78,7 +78,7 @@
         ));
       ?>
       <?php if($query->have_posts()) { ?>  
-      <section class="sec sec-exames-realizados">
+      <section class="sec sec-exames-realizados fade-in-element">
         <div class="container">
           <h2>Exames mais realizados</h2>
           <h3>Tecnologia e precisão em cada diagnóstico.</h3>
@@ -87,7 +87,7 @@
             <?php while($query->have_posts()) {  $query->the_post(); ?>
             <div class="col-md-6 col-xl-4">
               <div class="cada-exame-content">
-                <div class="cada-exame-left"  style="background-image: url(<?php the_field('icone_exame'); ?>);">
+                <div class="cada-exame-left lazy-background"  data-src="<?php the_field('icone_exame'); ?>">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </div>
                 <div class="cada-exame-right">
@@ -104,7 +104,7 @@
       </section>
       <?php } wp_reset_postdata(); ?>
 
-      <section class="sec-cta-texto-cinza">
+      <section class="sec-cta-texto-cinza fade-in-element">
         <div class="container">
           <div class="content-cta-texto-cinza">
             <?php echo acf_esc_html(get_field('texto_cta_1')); ?>
@@ -115,7 +115,7 @@
 
       <?php $query = new WP_Query( array( 'post_type' => 'post' , 'posts_per_page' => 6 ) ); ?>
       <?php if($query->have_posts()) { ?>  
-      <section class="sec sec-blog-home">
+      <section class="sec sec-blog-home fade-in-element">
         <div class="container">
           <h2>Blog</h2>
           <p>Conteúdos feitos para orientar você e sua família com clareza e segurança.</p>
@@ -123,7 +123,7 @@
             <?php while($query->have_posts()) {  $query->the_post(); ?>
             <div>
               <div class="cada-post-blog">
-                <div class="img-blog"  style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+                <div class="img-blog lazy-background" data-src="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
                 <div class="content-blog">
                   <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 </div>
@@ -138,7 +138,7 @@
 
       <?php $query = new WP_Query( array( 'post_type' => 'depoimento' , 'posts_per_page' => 4 ) ); ?>
       <?php if($query->have_posts()) { ?>   
-      <section class="sec-depoimentos">
+      <section class="sec-depoimentos fade-in-element">
         <div class="container">
           <h2><strong>Histórias de cuidado que passam de geração em geração:</strong> o que nossos pacientes dizem no Google!</h2>
           <div class="carousel-depoimentos" id="carousel-depoimentos">
@@ -163,7 +163,7 @@
 
       <?php $query = new WP_Query( array( 'post_type' => 'unidade' , 'posts_per_page' => 8 ) ); ?>
       <?php if($query->have_posts()) { ?> 
-      <section class="sec sec-unidades">
+      <section class="sec sec-unidades fade-in-element">
         <div class="container">
           <h2>Estamos perto de você!</h2>
           <div class="row lista-unidades">

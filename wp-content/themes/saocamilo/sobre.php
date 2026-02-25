@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <img src="<?php the_field('imagem_missao'); ?>" class="img-fluid" alt="Exames de imagem  em Sinop">
+          <img data-src="<?php the_field('imagem_missao'); ?>" class="img-fluid lazy-image" alt="Exames de imagem  em Sinop">
           <h3><?php the_field('texto_missao'); ?></h3>
         </div>
         <div class="col-lg-6">
@@ -39,7 +39,7 @@
         <div>
           <div class="cada-historia">
             <div class="ano"><?php the_title(); ?></div>
-            <div class="d-block text-center"><div class="img-historia" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div></div>
+            <div class="d-block text-center"><div class="img-historia lazy-background" data-src="<?php the_post_thumbnail_url(); ?>"></div></div>
             <?php the_excerpt(); ?>
           </div>
         </div>
@@ -55,31 +55,31 @@
       <div class="row">
         <div class="col-xxl-4">
           <div class="cada-icon-clinica-sobre">
-            <img src="<?php bloginfo('template_directory') ?>/images/c-1.svg" width="41" height="41" alt="Equipamentos de última geração">
+            <img class="lazy-image" data-src="<?php bloginfo('template_directory') ?>/images/c-1.svg" width="41" height="41" alt="Equipamentos de última geração">
             <p>Equipamentos de última geração para Ressonância Magnética e Tomografia Computadorizada.</p>
           </div>
         </div>
         <div class="col-xxl-4">
           <div class="cada-icon-clinica-sobre">
-            <img src="<?php bloginfo('template_directory') ?>/images/c-2.svg" width="41" height="41" alt="Mamografia digital">
+            <img class="lazy-image" data-src="<?php bloginfo('template_directory') ?>/images/c-2.svg" width="41" height="41" alt="Mamografia digital">
             <p>Mamografia digital com tomossíntese, que permite maior nitidez e rastreamento precoce de lesões.</p>
           </div>
         </div>
         <div class="col-xxl-4">
           <div class="cada-icon-clinica-sobre">
-            <img src="<?php bloginfo('template_directory') ?>/images/c-3.svg" width="41" height="41" alt="Ultrassonografias avançadas">
+            <img class="lazy-image" data-src="<?php bloginfo('template_directory') ?>/images/c-3.svg" width="41" height="41" alt="Ultrassonografias avançadas">
             <p>Ultrassonografias avançadas, incluindo elastografia e protocolos multiparamétricos.</p>
           </div>
         </div>
         <div class="col-xxl-4">
           <div class="cada-icon-clinica-sobre">
-            <img src="<?php bloginfo('template_directory') ?>/images/c-4.svg" width="41" height="41" alt="Biopsia prostática">
+            <img class="lazy-image" data-src="<?php bloginfo('template_directory') ?>/images/c-4.svg" width="41" height="41" alt="Biopsia prostática">
             <p>Biopsia prostática guia por fusão de imagens, garantindo máxima precisão em diagnósticos urológicos.</p>
           </div>
         </div>
         <div class="col-xxl-4">
           <div class="cada-icon-clinica-sobre">
-            <img src="<?php bloginfo('template_directory') ?>/images/c-5.svg" width="41" height="41" alt="Avaliações especializadas">
+            <img class="lazy-image" data-src="<?php bloginfo('template_directory') ?>/images/c-5.svg" width="41" height="41" alt="Avaliações especializadas">
             <p>Avaliações especializadas, como DXA para composição corporal e VFA para avaliação de fraturas.</p>
           </div>
         </div>
@@ -96,7 +96,7 @@
       <div class="row">
         <?php while($query->have_posts()) {  $query->the_post(); ?>
         <div class="col-4 col-lg-2">
-          <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid" alt="<?php the_title(); ?>">
+          <img data-src="<?php the_post_thumbnail_url(); ?>" class="img-fluid lazy-image" alt="<?php the_title(); ?>">
         </div>
         <?php } ?>
       </div>
